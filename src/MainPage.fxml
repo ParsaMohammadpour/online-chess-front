@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainPageController">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane prefHeight="700.0" prefWidth="700.0">
+         <children>
+            <ImageView fx:id="settingImageView" fitHeight="85.0" fitWidth="83.0" layoutX="503.0" onMouseClicked="#goToSetting" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@setting.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="writerImageView" fitHeight="85.0" fitWidth="83.0" layoutX="616.0" onMouseClicked="#goToWriterPage" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@writer.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="200.0" fitWidth="450.0" layoutX="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@mainPageImageView.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="85.0" fitWidth="201.0" layoutX="21.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@block.jpg" />
+               </image>
+            </ImageView>
+            <ListView fx:id="blockedListView" fixedCellSize="50.0" layoutY="231.0" prefHeight="423.0" prefWidth="200.0" />
+            <ImageView fitHeight="112.0" fitWidth="180.0" layoutX="525.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@online.jpg" />
+               </image>
+            </ImageView>
+            <ListView fx:id="onlineListView" fixedCellSize="50.0" layoutX="496.0" layoutY="237.0" prefHeight="417.0" prefWidth="200.0" />
+            <ListView fx:id="historyListView" fixedCellSize="100.0" layoutX="222.0" layoutY="231.0" prefHeight="423.0" prefWidth="252.0" />
+            <ImageView fx:id="refreshImageView" fitHeight="44.0" fitWidth="40.0" layoutX="222.0" layoutY="661.0" onMouseClicked="#refresh" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@refresh.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="profileImageView" fitHeight="119.0" fitWidth="173.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+            <ImageView fx:id="sendImageView" fitHeight="40.0" fitWidth="49.0" layoutX="638.0" layoutY="660.0" onMouseClicked="#send" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@send.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="logoutImageView" fitHeight="40.0" fitWidth="40.0" layoutX="81.0" layoutY="670.0" onMouseClicked="#logout" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logout.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="searchTextField" layoutX="539.0" layoutY="196.0" prefHeight="40.0" prefWidth="160.0" promptText="Search">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+            <ImageView fx:id="searchImageView" fitHeight="40.0" fitWidth="40.0" layoutX="500.0" layoutY="196.0" onMouseClicked="#search" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@search.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="blockUserButton" layoutX="497.0" layoutY="668.0" mnemonicParsing="false" onMouseClicked="#blockThisUser" text="Block This User" textFill="#9e0000" />
+            <Button fx:id="ongoingGameButton" layoutX="313.0" layoutY="668.0" mnemonicParsing="false" onMouseClicked="#goToOngoingGame" text="Go To Ongoing Game" textFill="#007537" />
+         </children>
+      </Pane>
+   </children>
+</GridPane>
